@@ -1,4 +1,5 @@
 <?php
+    require("../vendor/autoload.php");
     session_start();
     if(empty($_SESSION['profLogado']) || $_SESSION['profLogado'] == false) {
         header('location: ./LoginProfController.php');

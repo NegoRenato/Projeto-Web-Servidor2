@@ -1,5 +1,5 @@
-<?php 
-    require('../model/Aluno.php');
+<?php
+    require("../vendor/autoload.php");
     session_start();
 
     if(empty($_SESSION['alunoLogado']) || $_SESSION['alunoLogado'] == false) {

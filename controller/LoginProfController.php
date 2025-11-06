@@ -1,6 +1,5 @@
 <?php
-    require('../conexao.php');
-    require('../model/Professor.php');
+    require("../vendor/autoload.php");
     session_start();
 
     $bd = Conexao::get();
@@ -38,5 +37,4 @@
     if(!empty($_GET['voltarLogin'])){
         header('location: ../index.php');
     }
-
     require('../View/LoginProfView.php');

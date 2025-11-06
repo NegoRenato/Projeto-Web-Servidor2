@@ -1,6 +1,5 @@
 <?php
-    require('../conexao.php');
-    require('../model/Professor.php');
+    require("../vendor/autoload.php");
     session_start();
 
     $bd = Conexao::get();
