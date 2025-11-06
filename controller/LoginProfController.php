@@ -18,6 +18,7 @@
 
             if ($professor && password_verify($_POST['senha'], $professor->senha)) {
                 $loginSucesso = true;
+                $_SESSION['usuario'] = $professor->nome_usuario;
             }
             
             if ($loginSucesso) {
