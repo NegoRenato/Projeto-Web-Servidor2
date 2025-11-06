@@ -1,0 +1,144 @@
+/* --- Configurações Gerais da Página --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5; /* Um fundo cinza claro */
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* --- Container Principal (O "Card" do Formulário) --- */
+main {
+    width: 100%;
+    max-width: 400px; /* Define uma largura máxima para o formulário de login */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Título do Formulário --- */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* --- Formulário de Login --- */
+#login {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    gap: 15px; /* Espaço entre os campos e o botão */
+}
+
+/* --- Estilo das Labels --- */
+#login label {
+    display: flex; /* Para alinhar o texto do label e o input na mesma linha se quiser, mas aqui vamos usar flex-direction: column para quebrar */
+    flex-direction: column;
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+}
+
+/* --- Estilo das Caixas de Texto --- */
+.caixa-texto {
+    width: 100%;
+    padding: 11px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    margin-top: 6px; /* Espaço entre o texto do label e a caixa */
+}
+
+.caixa-texto:focus {
+    border-color: #007bff; /* Borda azul ao focar */
+    outline: none; /* Remove o outline padrão */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Sombra suave */
+}
+
+/* --- Estilo Geral dos Botões --- */
+.botao {
+    display: inline-block;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* --- Botão Principal (LOGAR) --- */
+#login .botao {
+    width: 100%; /* Ocupa a largura total */
+    background-color: #28a745; /* Verde para ação principal */
+    color: white;
+    margin-top: 10px; /* Espaço antes do botão de login */
+}
+
+#login .botao:hover {
+    background-color: #218838; /* Verde mais escuro */
+    transform: translateY(-2px); /* Eleva o botão levemente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#login .botao:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Botão Secundário (Voltar) --- */
+#voltar {
+    width: 100%; /* Permite centralizar o botão filho */
+    text-align: left; /* Alinha o botão 'Voltar' à esquerda */
+    margin-bottom: 25px; /* Espaço entre o botão Voltar e o título h2 */
+}
+
+#voltar .botao {
+    width: auto; /* Tamanho automático */
+    background-color: #f8f9fa; /* Fundo claro */
+    color: #555;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    padding: 8px 15px;
+    text-transform: none; /* Texto normal */
+    box-shadow: none; /* Remove sombra do botão voltar */
+}
+
+#voltar .botao:hover {
+    background-color: #e2e6ea; /* Cinza claro no hover */
+    transform: none; /* Sem elevação */
+    box-shadow: none;
+}
+
+#voltar .botao:active {
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* --- Mensagens de Erro (Estiliza a tag <p> do PHP) --- */
+#login > p {
+    text-align: center;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 14px;
+    background-color: #f8d7da; /* Fundo vermelho claro */
+    border: 1px solid #f5c6cb;
+    color: #721c24; /* Texto vermelho escuro */
+}

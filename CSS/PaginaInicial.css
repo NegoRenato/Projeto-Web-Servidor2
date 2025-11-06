@@ -1,0 +1,76 @@
+/* --- Resets básicos e corpo da página --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Estilo do Título --- */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- Container do Menu --- */
+/* Usamos :nth-of-type(2) para selecionar a segunda <section> 
+  que é onde seus botões estão.
+*/
+body > section:nth-of-type(2) {
+    display: flex; /* Alinha os itens (formulários) em linha */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas menores */
+    gap: 15px; /* Adiciona um espaço de 15px entre cada botão */
+    width: 100%;
+    max-width: 800px; /* Define uma largura máxima para o menu */
+}
+
+/* Removemos a margem padrão dos formulários para 
+  que o 'gap' funcione corretamente.
+*/
+.formulario,
+body > section:nth-of-type(2) > form {
+    margin: 0;
+}
+
+/* --- Estilo principal dos botões do menu --- */
+.botao {
+    display: block; /* Faz o input ocupar todo o espaço do formulário pai */
+    width: 200px; /* Define uma largura fixa para os botões */
+    padding: 12px 20px; /* Espaçamento interno (altura e largura) */
+    
+    /* Cores e Texto */
+    background-color: #007bff; /* Cor de fundo (azul) */
+    color: white; /* Cor do texto */
+    font-size: 14px;
+    font-weight: 600; /* Peso da fonte (semi-bold) */
+    text-align: center;
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    letter-spacing: 0.5px; /* Espaçamento leve entre as letras */
+
+    /* Bordas e Formato */
+    border: none; /* Remove a borda padrão do input */
+    border-radius: 8px; /* Cantos arredondados */
+    
+    /* Efeitos e Interação */
+    cursor: pointer; /* Ícone de "mãozinha" ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* --- Efeito :hover (ao passar o mouse por cima) --- */
+.botao:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+    transform: translateY(-2px); /* Eleva o botão levemente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+}
+
+/* --- Efeito :active (ao clicar) --- */
+.botao:active {
+    transform: translateY(0); /* Retorna à posição original */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra original */
+}

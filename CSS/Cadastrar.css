@@ -1,0 +1,145 @@
+/* --- Configurações Gerais da Página --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5; /* Um fundo cinza claro */
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* --- Container Principal (O "Card" do Formulário) --- */
+main {
+    width: 100%;
+    max-width: 500px; /* Define uma largura máxima para o formulário */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Título do Formulário --- */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* --- Formulário Principal --- */
+#formulario {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em uma coluna */
+}
+
+/* --- Estilo das Labels --- */
+#formulario label {
+    display: block; /* Faz cada <label> ocupar sua própria linha */
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+    /* As tags <br> no seu HTML cuidarão do espaçamento principal */
+}
+
+/* --- Estilo das Caixas de Texto e Data --- */
+.caixa-texto,
+input[type="date"] {
+    width: 100%;
+    padding: 11px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    margin-top: 6px; /* Espaço entre o texto do label e a caixa */
+}
+
+/* --- Estilo para o grupo de Radio (Sexo) --- */
+/* NOTA: Seu HTML tem IDs duplicados ("id=5") e labels <label> dentro de <label>. 
+   Isso pode causar problemas de acessibilidade. 
+   Este CSS tenta estilizar, mas recomendo corrigir o HTML. */
+label[for="5"] {
+    margin-top: 5px;
+}
+
+label[for="5"] input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 15px; /* Espaço depois de "Sexo:" e entre as opções */
+    cursor: pointer;
+}
+
+/* Estiliza os textinhos "Masculino" e "Feminino" */
+label[for="5"] label {
+    font-weight: normal;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+
+/* --- Estilo Geral dos Botões --- */
+.botao {
+    display: inline-block;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* --- Botão Principal (Cadastrar) --- */
+#formulario .botao {
+    width: 100%; /* Ocupa a largura total */
+    background-color: #007bff; /* Azul primário */
+    color: white;
+    margin-top: 10px; /* Espaço antes do botão de cadastro */
+}
+
+#formulario .botao:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+}
+
+/* --- Botão Secundário (Voltar) --- */
+#botaoVoltar {
+    margin-bottom: 20px; /* Espaço entre o botão Voltar e o título h2 */
+}
+
+#botaoVoltar .botao {
+    width: auto; /* Tamanho automático */
+    background-color: #f8f9fa; /* Fundo claro */
+    color: #555;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    padding: 8px 15px;
+    text-transform: none; /* Texto normal */
+}
+
+#botaoVoltar .botao:hover {
+    background-color: #e2e6ea; /* Cinza claro no hover */
+}
+
+/* --- Mensagens de Erro e Sucesso (Estiliza as tags <p> do PHP) --- */
+main > p {
+    text-align: center;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Melhora a estilização das mensagens do seu PHP */
+main > p[style*="color: red;"] {
+    background-color: #f8d7da; /* Fundo vermelho claro */
+    border: 1px solid #f5c6cb;
+}
+
+main > p[style*="color: green;"] {
+    background-color: #d4edda; /* Fundo verde claro */
+    border: 1px solid #c3e6cb;
+}
